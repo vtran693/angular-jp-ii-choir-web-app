@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { appReducers } from './store/reducers/app.reducer';
-import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { StoreRouterConnectingModule, DefaultRouterStateSerializer } from '@ngrx/router-store';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     BrowserModule,
 
     StoreModule.forRoot(appReducers),
-    StoreRouterConnectingModule.forRoot({
+    StoreRouterConnectingModule.forRoot({ serializer: DefaultRouterStateSerializer,
       stateKey: 'router'
     }),
 
