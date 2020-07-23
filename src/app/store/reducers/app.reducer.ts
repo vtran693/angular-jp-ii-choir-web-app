@@ -6,6 +6,5 @@ import { configReducers } from './config.reducer';
 
 export const appReducers: ActionReducerMap<IAppState, any> = {
     router: routerReducer,
-    users: userReducers,
-    config: configReducers,
+    users: userReducers
 }

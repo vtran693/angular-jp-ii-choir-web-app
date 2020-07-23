@@ -5,12 +5,11 @@ import { initialConfigState, IConfigState } from './config.state';
 export interface IAppState {
     router?: RouterReducerState;
     users: IUserState;
-    config: IConfigState;
+    config?: IConfigState;
 }
 
 export const initialAppState: IAppState = {
-    users: initialUserState,
-    config: initialConfigState
+    users: initialUserState
 }
 
 export function getInitialState(): IAppState {
