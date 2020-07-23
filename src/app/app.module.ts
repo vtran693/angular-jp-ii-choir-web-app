@@ -11,6 +11,7 @@ import {
   MinimalRouterStateSerializer
 } from '@ngrx/router-store';
 import { HomeComponent } from './containers/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HomeComponent } from './containers/home/home.component';
     StoreRouterConnectingModule.forRoot({ serializer: MinimalRouterStateSerializer,
       stateKey: 'router'
     }),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
