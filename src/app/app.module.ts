@@ -7,11 +7,22 @@ import { StoreModule } from '@ngrx/store';
 import { appReducers } from './store/reducers/app.reducer';
 import {
   StoreRouterConnectingModule,
-  DefaultRouterStateSerializer,
   MinimalRouterStateSerializer
 } from '@ngrx/router-store';
 import { HomeComponent } from './containers/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from "@angular/material/button";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatIconModule} from "@angular/material/icon";
+import {MatCardModule} from "@angular/material/card";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatInputModule} from "@angular/material/input";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import {MemberService} from "./services/member/member.service";
 
 @NgModule({
   declarations: [
@@ -25,7 +36,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       stateKey: 'router'
     }),
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatIconModule,
+    MatCardModule,
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTooltipModule,
+    MatToolbarModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent]
