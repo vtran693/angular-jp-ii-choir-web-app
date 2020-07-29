@@ -27,6 +27,6 @@ export interface IUserState {
 }
 
 export const initialUserState: IUserState = {
-    users: memberListMock,
+    users: null,
     selectedUser: null
 }

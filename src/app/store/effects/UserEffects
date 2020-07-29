@@ -1,0 +1,18 @@
+import {Injectable} from "@angular/core";
+import {Actions, createEffect, ofType} from "@ngrx/effects";
+import {UserService} from "../../services/user.service";
+import * as UserActions from "../actions/user.action"
+import {IUser} from "../../models/user.model";
+import {pipe} from "rxjs";
+import {mergeMap} from "rxjs/operators";
+
+
+@Injectable({
+    providedIn: 'root'
+})
+export class UserEffects{
+
+  constructor(private action$: Actions, private userService: UserService) {}
+
+
+}

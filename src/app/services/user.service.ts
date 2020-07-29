@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import {IUser} from "../../models/user.model";
+import {IUser} from "../models/user.model";
 
 @Injectable({
   providedIn: 'root'
 })
-export class MemberService {
+export class UserService {
 
-  memberListMock: IUser[] = [
+  userListMock: IUser[] = [
     {
       id: 1,
       firstName: 'Viet',
@@ -33,7 +33,7 @@ export class MemberService {
 
   }
 
-  getAllMembers = (): IUser[]  => this.memberListMock ;
+  getAllUsers = (): IUser[]  => this.userListMock ;
 
 
 

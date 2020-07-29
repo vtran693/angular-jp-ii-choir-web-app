@@ -22,12 +22,17 @@ import {MatInputModule} from "@angular/material/input";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
-import {MemberService} from "./services/member/member.service";
+import {UserService} from "./services/user.service";
+import {EffectsModule} from "@ngrx/effects";
+import {UserComponent} from "./components/user/user.component";
+import {UserListComponent} from "./containers/user-list/user-list.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    UserListComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,7 @@ import {MemberService} from "./services/member/member.service";
     MatInputModule,
     MatTooltipModule,
     MatToolbarModule,
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
