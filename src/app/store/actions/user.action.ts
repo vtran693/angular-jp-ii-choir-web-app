@@ -18,9 +18,9 @@ export const getUsersSuccess = createAction(
   props<{payload: IUser[]}>()
 );
 
-export const getUser = createAction(
+export const updateSelectedUser = createAction(
   EUserActions.GetUser,
-  props<{payload: number}>()
+  props<{payload: IUser}>()
 );
 
 export const getUserSuccess = createAction(

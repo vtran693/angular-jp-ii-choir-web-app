@@ -1,0 +1,17 @@
+<div *ngIf="this.menuList?.length; else thenBlock">
+  <div *ngFor="let menu of this.menuList">
+    <app-menu [currentMenu]="menu" (selectMenu)="updateSelectedMenu($event)"></app-menu>
+  </div>
+  <div>
+    <h4>Selected Menu:</h4>
+    <div *ngIf="selectedMenu; else noSelectedMenu">
+      <app-menu [currentMenu]="selectedMenu"></app-menu>
+    </div>
+    <ng-template #noSelectedMenu><div>None</div></ng-template>
+  </div>
+</div>
+
+<ng-template #thenBlock>
+  <div>Menu List is not loaded yet. Please click the button below to load the list from backend</div>
+  <button (click)="getMenuList()">Load Menu List</button>
+</ng-template>

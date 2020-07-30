@@ -26,13 +26,17 @@ import {UserService} from "./services/user.service";
 import {EffectsModule} from "@ngrx/effects";
 import {UserComponent} from "./components/user/user.component";
 import {UserListComponent} from "./containers/user-list/user-list.component";
+import {MenuListComponent} from "./containers/menu-list/menu-list.component";
+import {MenuComponent} from "./components/menu/menu.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     UserListComponent,
-    UserComponent
+    UserComponent,
+    MenuListComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
